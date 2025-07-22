@@ -18,13 +18,13 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "listenLink" && info.linkUrl) {
     chrome.tabs.create({
-      url: `https://alloud.kodditor.co/listen?url=${encodeURIComponent(info.linkUrl)}`
+      url: `https://alloud.kodditor.co/listen/${encodeURIComponent(info.linkUrl)}`
     });
   }
 
   if (info.menuItemId === "listenPage" && tab?.url) {
     chrome.tabs.create({
-      url: `https://alloud.kodditor.co/listen?url=${encodeURIComponent(tab.url)}`
+      url: `https://alloud.kodditor.co/listen/${encodeURIComponent(tab.url)}`
     });
   }
 });
