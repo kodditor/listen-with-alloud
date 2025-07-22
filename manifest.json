@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Listen with Alloud",
+  "description": "Right-click on any link or page to listen with Alloud.",
+  "version": "1.0.0",
+  "permissions": ["contextMenus", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Listen with Alloud"
+  },
+  "icons": {
+    "16": "icons/icon-16.jpg",
+    "48": "icons/icon-48.jpg",
+    "128": "icons/icon-128.jpg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "listen-with-alloud@alloud.kodditor.co",
+      "strict_min_version": "109.0"
+    }
+  }
+}
